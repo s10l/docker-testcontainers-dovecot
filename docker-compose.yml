@@ -9,6 +9,7 @@ services:
       - "995:995"
     volumes: 
       - "./conf.d/10-auth.conf:/etc/dovecot/conf.d/10-auth.conf"
+      - "./conf.d/10-ssl.custom.conf:/etc/dovecot/conf.d/10-ssl.custom.conf"
       - "./conf.d/10-logging.custom.conf:/etc/dovecot/conf.d/10-logging.custom.conf"
       - "./conf.d/auth-passwdfile.conf.ext:/etc/dovecot/conf.d/auth-passwdfile.conf.ext"
       - "./users:/etc/dovecot/users"
