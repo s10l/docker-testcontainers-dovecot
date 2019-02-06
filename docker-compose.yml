@@ -1,0 +1,17 @@
+version: '3'
+services:
+  dovecot:
+    build: .
+    ports:
+      - "110:110"
+      - "143:143"
+      - "993:993"
+      - "995:995"
+    volumes: 
+      - "./conf.d/10-logging.conf:/etc/dovecot/conf.d/10-logging.conf"
+      - "./conf.d/10-auth.conf:/etc/dovecot/conf.d/10-auth.conf"
+      - "./conf.d/auth-passwdfile.conf.ext:/etc/dovecot/conf.d/auth-passwdfile.conf.ext"
+      - "./users:/etc/dovecot/users"
+      - "./dovecot.log:/var/log/dovecot.log"
+      - "./vhosts:/var/spool/vhosts"
+      
