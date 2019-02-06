@@ -12,6 +12,5 @@ services:
       - "./conf.d/10-auth.conf:/etc/dovecot/conf.d/10-auth.conf"
       - "./conf.d/auth-passwdfile.conf.ext:/etc/dovecot/conf.d/auth-passwdfile.conf.ext"
       - "./users:/etc/dovecot/users"
-      - "./dovecot.log:/var/log/dovecot.log"
       - "./vhosts:/var/spool/vhosts"
       
